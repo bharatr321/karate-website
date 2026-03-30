@@ -1,0 +1,545 @@
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mushin Karate Academy | Best Karate Training & Self-Defense Classes</title>
+    <meta name="description" content="Join the best Karate training center for kids, students, and adults. Build confidence, discipline, and strength. Book a free trial class today!">
+    <meta name="keywords" content="Karate classes near me, best karate training, self-defense classes, martial arts for kids, karate coaching, adult karate">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&family=Teko:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            red: '#D90429',
+                            darkRed: '#8D0801',
+                            dark: '#0B0C10',
+                            gray: '#1F2833',
+                            light: '#C5C6C7',
+                            white: '#66FCF1' // Optional accent, swapped for standard white mostly
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Teko', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0B0C10;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #D90429;
+            border-radius: 4px;
+        }
+        
+        /* Hero Overlay Gradient */
+        .hero-overlay {
+            background: linear-gradient(to right, rgba(11,12,16,0.95) 0%, rgba(11,12,16,0.7) 50%, rgba(11,12,16,0.2) 100%);
+        }
+
+        /* Text Stroke Effect */
+        .text-stroke {
+            -webkit-text-stroke: 1px rgba(255,255,255,0.2);
+            color: transparent;
+        }
+
+        /* Belt Animation */
+        .belt-stripe {
+            height: 4px;
+            width: 100%;
+            background: linear-gradient(90deg, #D90429 0%, #8D0801 100%);
+        }
+    </style>
+</head>
+<body class="bg-brand-dark text-white font-sans antialiased overflow-x-hidden">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 bg-brand-dark/90 backdrop-blur-md border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 cursor-pointer">
+                    <span class="font-display text-3xl font-bold tracking-wider text-white">
+                        MUSHIN <span class="text-brand-red">KARATE</span>
+                    </span>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:block">
+                    <div class="ml-10 flex items-baseline space-x-8">
+                        <a href="#home" class="hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Home</a>
+                        <a href="#about" class="hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">About Us</a>
+                        <a href="#programs" class="hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Programs</a>
+                        <a href="#gallery" class="hover:text-brand-red px-3 py-2 rounded-md text-sm font-medium transition-colors">Gallery</a>
+                        <a href="#contact" class="bg-brand-red hover:bg-brand-darkRed text-white px-5 py-2 rounded-full text-sm font-bold uppercase tracking-wider transition-all transform hover:scale-105 shadow-lg shadow-brand-red/30">
+                            Book Free Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Mobile menu button -->
+                <div class="-mr-2 flex md:hidden">
+                    <button id="mobile-menu-btn" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="md:hidden hidden bg-brand-gray border-t border-gray-700">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="text-white hover:text-brand-red block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="#about" class="text-white hover:text-brand-red block px-3 py-2 rounded-md text-base font-medium">About Us</a>
+                <a href="#programs" class="text-white hover:text-brand-red block px-3 py-2 rounded-md text-base font-medium">Programs</a>
+                <a href="#contact" class="text-brand-red font-bold block px-3 py-2 rounded-md text-base">Book Free Demo</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://images.unsplash.com/photo-1555597673-b21d5c935865?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Karate Training" class="w-full h-full object-cover opacity-40">
+            <div class="hero-overlay absolute inset-0"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full pt-20 pb-16">
+            <div class="lg:w-2/3" data-aos="fade-right" data-aos-duration="1000">
+                <div class="inline-flex items-center px-3 py-1 rounded-full border border-brand-red/30 bg-brand-red/10 text-brand-red text-sm font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-brand-red mr-2 animate-pulse"></span>
+                    Accepting New Students: Limited Seats for 2024
+                </div>
+                <h1 class="font-display text-6xl md:text-8xl font-bold leading-tight mb-6 uppercase">
+                    Discipline.<br>
+                    <span class="text-brand-red">Strength.</span><br>
+                    Honor.
+                </h1>
+                <p class="text-lg md:text-xl text-gray-300 mb-8 max-w-xl leading-relaxed">
+                    Build unshakeable confidence and master self-defense at the region's premier Karate Academy. Join 500+ students forging their path to black belt.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#contact" class="inline-flex items-center justify-center px-8 py-4 border border-transparent text-lg font-bold rounded-md text-white bg-brand-red hover:bg-brand-darkRed md:text-xl transition-all shadow-lg shadow-brand-red/40 transform hover:-translate-y-1">
+                        Start Free Trial
+                        <i class="fas fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#programs" class="inline-flex items-center justify-center px-8 py-4 border border-gray-600 bg-transparent text-lg font-medium rounded-md text-white hover:bg-gray-800 md:text-xl transition-all">
+                        View Programs
+                    </a>
+                </div>
+                
+                <!-- Trust Indicators -->
+                <div class="mt-12 flex items-center gap-6 text-gray-400">
+                    <div>
+                        <p class="text-3xl font-bold text-white">15+</p>
+                        <p class="text-sm">Years Experience</p>
+                    </div>
+                    <div class="w-px h-10 bg-gray-700"></div>
+                    <div>
+                        <p class="text-3xl font-bold text-white">500+</p>
+                        <p class="text-sm">Active Students</p>
+                    </div>
+                    <div class="w-px h-10 bg-gray-700"></div>
+                    <div>
+                        <p class="text-3xl font-bold text-white">4.9/5</p>
+                        <p class="text-sm">Google Rating</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Scroll Down Indicator -->
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/50">
+            <i class="fas fa-chevron-down text-2xl"></i>
+        </div>
+    </section>
+
+    <!-- Features / Benefits Section -->
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold text-white mb-4">Why Choose <span class="text-brand-red">Mushin Karate?</span></h2>
+                <p class="text-gray-400 max-w-2xl mx-auto">We don't just teach kicks and punches. We build character, mental resilience, and a community of respectful warriors.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Feature 1 -->
+                <div class="bg-brand-gray p-8 rounded-xl border-l-4 border-brand-red hover:bg-gray-800 transition-colors group" data-aos="fade-up" data-aos-delay="100">
+                    <div class="w-14 h-14 bg-brand-red/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-brand-red transition-colors">
+                        <i class="fas fa-shield-halved text-2xl text-brand-red group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Self-Defense Mastery</h3>
+                    <p class="text-gray-400">Learn practical techniques to protect yourself and your loved ones in real-world scenarios.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="bg-brand-gray p-8 rounded-xl border-l-4 border-white hover:border-brand-red transition-colors group" data-aos="fade-up" data-aos-delay="200">
+                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-white transition-colors">
+                        <i class="fas fa-brain text-2xl text-white group-hover:text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Mental Discipline</h3>
+                    <p class="text-gray-400">Sharpen focus, increase concentration for school/work, and develop a warrior mindset.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="bg-brand-gray p-8 rounded-xl border-l-4 border-white hover:border-brand-red transition-colors group" data-aos="fade-up" data-aos-delay="300">
+                    <div class="w-14 h-14 bg-white/10 rounded-full flex items-center justify-center mb-6 group-hover:bg-white transition-colors">
+                        <i class="fas fa-heart-pulse text-2xl text-white group-hover:text-brand-dark"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3 text-white">Total Fitness</h3>
+                    <p class="text-gray-400">High-intensity cardio, strength training, and flexibility work designed to transform your body.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-brand-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <div class="absolute -inset-4 bg-brand-red/20 blur-lg rounded-xl"></div>
+                    <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Karate Master" class="relative rounded-xl shadow-2xl border-2 border-white/10 w-full object-cover h-[500px]">
+                    <!-- Floating Badge -->
+                    <div class="absolute -bottom-6 -right-6 bg-brand-red p-6 rounded-xl shadow-lg hidden md:block">
+                        <p class="text-3xl font-display font-bold text-white">15+</p>
+                        <p class="text-xs font-bold uppercase tracking-wide text-white/80">Years Experience</p>
+                    </div>
+                </div>
+                
+                <div data-aos="fade-left">
+                    <h2 class="font-display text-4xl md:text-5xl font-bold mb-6">More Than A <br><span class="text-brand-red">Martial Art</span></h2>
+                    <p class="text-gray-300 text-lg mb-6">
+                        At Mushin Karate Academy, we believe the physical training is just the beginning. Our philosophy is rooted in the traditional Dojo Kun, emphasizing character development alongside combat skills.
+                    </p>
+                    <ul class="space-y-4 mb-8">
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check-circle text-brand-red mr-3"></i>
+                            Certified 4th Dan Black Belt Instructors
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check-circle text-brand-red mr-3"></i>
+                            Structured Belt Progression System
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check-circle text-brand-red mr-3"></i>
+                            Safe, Clean, and Professional Environment
+                        </li>
+                        <li class="flex items-center text-gray-300">
+                            <i class="fas fa-check-circle text-brand-red mr-3"></i>
+                            Inclusive Community for All Ages
+                        </li>
+                    </ul>
+                    <a href="#contact" class="text-brand-red font-bold uppercase tracking-wider hover:text-white transition-colors">Meet Our Instructors <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Programs Section -->
+    <section id="programs" class="py-20 bg-brand-dark relative">
+        <!-- Decorative Belt Background Element -->
+        <div class="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-black via-gray-800 to-black opacity-50"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <h2 class="font-display text-4xl font-bold text-white">Our <span class="text-brand-red">Training Programs</span></h2>
+                <p class="text-gray-400 mt-4">Structured pathways designed for every age and skill level.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1: Kids -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-red/20 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1552072092-7f9b8d63efcb?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Kids Karate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-brand-red text-sm font-bold uppercase mb-2">Ages 4-12</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Little Warriors</h3>
+                        <p class="text-gray-400 mb-6">Focus on listening skills, motor coordination, basic self-defense, and fun discipline. No experience needed.</p>
+                        <a href="#contact" class="block text-center w-full py-3 border border-gray-600 rounded-lg text-white font-semibold hover:bg-brand-red hover:border-brand-red transition-colors">Book Trial</a>
+                    </div>
+                </div>
+
+                <!-- Card 2: Adults (Featured) -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg transform md:-translate-y-4 relative border-2 border-brand-red hover:shadow-2xl hover:shadow-brand-red/20 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="absolute top-4 right-4 bg-brand-red text-white text-xs font-bold px-3 py-1 rounded-full">MOST POPULAR</div>
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Adult Karate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-brand-red text-sm font-bold uppercase mb-2">Ages 13+</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Adult Fitness & Combat</h3>
+                        <p class="text-gray-400 mb-6">High-intensity training mixed with traditional techniques. Perfect for fitness, stress relief, and serious self-defense.</p>
+                        <a href="#contact" class="block text-center w-full py-3 bg-brand-red rounded-lg text-white font-bold shadow-lg hover:bg-brand-darkRed transition-colors">Book Trial</a>
+                    </div>
+                </div>
+
+                <!-- Card 3: Advanced -->
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl hover:shadow-brand-red/20 transition-all duration-300 group" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1626244754023-55322c78a18d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Advanced Karate" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500">
+                    </div>
+                    <div class="p-8">
+                        <div class="text-brand-red text-sm font-bold uppercase mb-2">Brown Belts & Black Belts</div>
+                        <h3 class="text-2xl font-bold text-white mb-4">Elite Competition Team</h3>
+                        <p class="text-gray-400 mb-6">Strict regimen focused on Kata perfection, Kumite sparring strategy, and breaking techniques for grading.</p>
+                        <a href="#contact" class="block text-center w-full py-3 border border-gray-600 rounded-lg text-white font-semibold hover:bg-brand-red hover:border-brand-red transition-colors">Book Trial</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="py-20 bg-brand-gray">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-display text-4xl font-bold text-center text-white mb-12" data-aos="fade-up">Life at the <span class="text-brand-red">Dojo</span></h2>
+            
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 h-[600px] md:h-[500px]">
+                <div class="col-span-2 row-span-2 relative group overflow-hidden rounded-lg" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1599058945522-28d584b6f0ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Dojo Training">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold">Group Kata</p>
+                    </div>
+                </div>
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="100">
+                    <img src="https://images.unsplash.com/photo-1579952363873-27f3bade9f55?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Kids Karate">
+                </div>
+                <div class="col-span-1 row-span-1 relative group overflow-hidden rounded-lg" data-aos="fade-up" data-aos-delay="200">
+                    <img src="https://images.unsplash.com/photo-1560205001-a0608800581a?ixlib=rb-4.0.3&auto=format&fit=crop&w=400&q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Belt Grading">
+                    <div class="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
+                        <p class="text-white font-bold">Grading Day</p>
+                    </div>
+                </div>
+                <div class="col-span-2 row-span-1 relative group overflow-hidden rounded-lg" data-aos="fade-up">
+                    <img src="https://images.unsplash.com/photo-1517438984742-1262db08379e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" alt="Sparring">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="py-20 bg-brand-dark">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="font-display text-4xl font-bold text-center text-white mb-16" data-aos="fade-up">What <span class="text-brand-red">Parents Say</span></h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Review 1 -->
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800" data-aos="fade-up">
+                    <div class="flex text-brand-red mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic">"My son was very shy before joining. Just 3 months in, he's speaking up in class and has so much more energy at home. Highly recommend Mushin!"</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">S</div>
+                        <div class="ml-3">
+                            <p class="text-white font-bold">Sarah Jenkins</p>
+                            <p class="text-xs text-gray-500">Parent of 8yr old</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-brand-red mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic">"The best gym I've joined. It's a proper dojo with respect and tradition, but the workouts are killer. Great for stress relief."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">M</div>
+                        <div class="ml-3">
+                            <p class="text-white font-bold">Mike Ross</p>
+                            <p class="text-xs text-gray-500">Adult Student</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-gray-900/50 p-6 rounded-xl border border-gray-800" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-brand-red mb-4">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-400 mb-6 italic">"Excellent instructors who genuinely care about every student's progress. The belt grading system gives my daughter real goals to work towards."</p>
+                    <div class="flex items-center">
+                        <div class="w-10 h-10 rounded-full bg-gray-700 flex items-center justify-center text-white font-bold">L</div>
+                        <div class="ml-3">
+                            <p class="text-white font-bold">Linda Martinez</p>
+                            <p class="text-xs text-gray-500">Parent of 12yr old</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action / Contact Section -->
+    <section id="contact" class="py-20 bg-brand-red relative overflow-hidden">
+        <!-- Background Decor -->
+        <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 rounded-full bg-brand-dark/20 blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 rounded-full bg-white/10 blur-3xl"></div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-white rounded-2xl shadow-2xl overflow-hidden">
+                <div class="grid grid-cols-1 lg:grid-cols-2">
+                    
+                    <!-- Contact Info -->
+                    <div class="p-10 bg-brand-dark text-white flex flex-col justify-between">
+                        <div>
+                            <h2 class="font-display text-4xl font-bold mb-4">Start Your Journey <br>Today</h2>
+                            <p class="text-gray-400 mb-8">Fill out the form or visit us for a free trial class. First session is free for new students!</p>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-start">
+                                    <i class="fas fa-map-marker-alt text-brand-red mt-1 mr-4 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Visit Us</h4>
+                                        <p class="text-gray-400">123 Warrior Way, Martial Arts Plaza,<br>City Center, ST 90210</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-phone-alt text-brand-red mr-4 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Call Us</h4>
+                                        <p class="text-gray-400">+1 (555) 123-4567</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center">
+                                    <i class="fas fa-envelope text-brand-red mr-4 text-xl"></i>
+                                    <div>
+                                        <h4 class="font-bold text-lg">Email Us</h4>
+                                        <p class="text-gray-400">info@mushinkarate.com</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mt-10 pt-10 border-t border-gray-800">
+                            <p class="text-sm text-gray-500 mb-4">Follow our training updates:</p>
+                            <div class="flex space-x-4">
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-facebook-f"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-instagram"></i></a>
+                                <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center text-white hover:bg-brand-red transition-colors"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Form -->
+                    <div class="p-10 bg-white">
+                        <form class="space-y-6">
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Full Name</label>
+                                <input type="text" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Phone Number</label>
+                                <input type="tel" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" placeholder="(555) 123-4567">
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Class Interest</label>
+                                <select class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all">
+                                    <option>Kids Program (4-12)</option>
+                                    <option>Adult Fitness</option>
+                                    <option>Advanced Training</option>
+                                    <option>Private Lessons</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-sm font-medium text-gray-700 mb-1">Message (Optional)</label>
+                                <textarea rows="3" class="w-full px-4 py-3 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-red focus:border-transparent outline-none transition-all" placeholder="Any specific goals or injuries?"></textarea>
+                            </div>
+                            <button type="button" class="w-full bg-brand-dark text-white font-bold py-4 rounded-lg hover:bg-brand-red transition-colors shadow-lg">
+                                CLAIM FREE CLASS
+                            </button>
+                            <p class="text-xs text-center text-gray-500">By clicking above, you agree to our Terms of Service. No spam, ever.</p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <span class="font-display text-2xl font-bold tracking-wider text-white mb-4 block">
+                MUSHIN <span class="text-brand-red">KARATE</span>
+            </span>
+            <p class="text-gray-500 text-sm mb-8">&copy; 2024 Mushin Karate Academy. All rights reserved.</p>
+            <div class="text-gray-600 text-xs">
+                <a href="#" class="hover:text-white mr-4">Privacy Policy</a>
+                <a href="#" class="hover:text-white">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/1234567890" target="_blank" class="fixed bottom-6 right-6 z-50 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl transition-all hover:scale-110 flex items-center justify-center">
+        <i class="fab fa-whatsapp text-4xl"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS Animations
+        AOS.init({
+            once: true,
+            offset: 100,
+            duration: 800,
+        });
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-brand-dark/95', 'shadow-lg');
+                navbar.classList.remove('bg-brand-dark/90');
+            } else {
+                navbar.classList.remove('bg-brand-dark/95', 'shadow-lg');
+                navbar.classList.add('bg-brand-dark/90');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu on link click
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>
